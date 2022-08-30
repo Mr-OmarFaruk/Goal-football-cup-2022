@@ -58,7 +58,7 @@
 /* Banner section style end */
 
 .blogs {
-  margin: 40px 140px 140px 140px;
+  margin: 140px;
   display: flex;
 }
 .blog-menu {
@@ -96,6 +96,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin: 0 2rem 0 2rem;
 }
 .blog {
   background-color: #e8e8e8;
@@ -132,6 +133,15 @@
   opacity: 70%;
 }
 /* blog section style end */
+.update {
+  text-align: center;
+  margin: 50px auto;
+}
+.update img{
+  width: 80%;
+  border-radius: 10px;
+  padding: 50px 0;
+}
 
 footer {
   background-color: #161616;
@@ -144,7 +154,7 @@ footer {
   font-weight: 600;
 }
 hr {
-  width: 80%;
+  width: 70%;
   margin-top: 50px;
   margin-bottom: 50px;
   border: 1px solid #b9b9b9;
@@ -152,7 +162,9 @@ hr {
 .menu ul {
   list-style: none;
   display: flex;
-  width: 70%;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 60%;
   padding: 50px 0;
 }
 .menu ul > li > a {
@@ -163,6 +175,110 @@ hr {
 .menu ul > li > a:hover {
   color: #dd0000;
 }
-.social-media {
-  background-image: url(assets/wave.svg);
+/* footer style end */
+
+
+
+
+
+/* ===================
+media query for responsive 
+=================== */
+
+
+
+
+/* small devices */
+@media only screen and (max-width: 668px) {
+  .banner{
+    margin: 30px auto;
+    width: 90%;
+    flex-direction: column;
+  }
+  .text {
+    padding: 10px;
+  }
+  .text h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .all-blogs {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  .blogs {
+    display: block;
+  }
+  .blog-menu {
+    background-color: #ffffff;
+  }
+  .menu-btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menu-btn a {
+    padding: 10px 10px;
+    gap: 20px;
+  }
+}
+
+/* medium devices */
+@media only screen and (min-width: 669px) and (max-width: 992px) {
+  .banner{
+    margin: 30px auto;
+    width: 90%;
+  }
+  .text {
+    padding: 10px;
+  }
+  .text h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+ 
+  /* banner section end */
+  .blogs {
+    margin: 10px;
+    display: block;
+  }
+  .blog-menu {
+    background-color: #ffffff;
+  }
+  .menu-btn {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-around;
+  }
+  .menu-btn a {
+    padding: 10px 10px;
+    width: 100%;
+  }
+  .all-blogs {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+  hr {
+    width: 50%;
+  }
+  .menu{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    width: 70%;
+    padding: 50px 0;
+  }
+  footer{
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
+/* Lagre devices */
+@media only screen and(min-width: 993px) {
 }
